@@ -31,6 +31,7 @@ const wavesColor = document.querySelectorAll(".waves-img");
 const firstWavesColor = document.querySelector(".first-waves-img");
 const footerColor = document.querySelector(".footer-container");
 const footerText = document.querySelector(".footer-text");
+const contactForm = document.querySelector(".contact-form");
 
 // lightTheme function
 function lightThemeChange() {
@@ -44,6 +45,7 @@ function lightThemeChange() {
   firstWavesColor.setAttribute("fill", "#f8f9fa");
   footerColor.classList.replace("bg-white", "bg-primary");
   footerText.style.color = "white";
+  contactForm.classList.replace("bg-secondary", "bg-primary");
   galleryImgOpacity1();
 }
 
@@ -58,6 +60,8 @@ function darkThemeChange() {
   firstWavesColor.setAttribute("fill", "#212529");
   footerColor.classList.replace("bg-primary", "bg-white");
   galleryImgOpacity();
+  contactForm.classList.replace("bg-primary", "bg-secondary");
+  footerText.style.color = "black";
 }
 
 lightTheme.addEventListener("click", function () {
